@@ -1,0 +1,30 @@
+
+<ion-view view-title="Login">
+ <ion-nav-bar class="bar-dark">
+  <ion-nav-buttons side="left">
+        <img src="img/logo.png" class="backlogo" />
+      </ion-nav-buttons>
+       </ion-nav-bar>
+      <div class="black">
+    <ion-content padding="true" class="loginsplash has-header">
+            <ion-list>
+                <label class="item item-input viewopacity">
+                    <span class="input-label">Matric. No.</span>
+                    <input type="text" placeholder="sse/xxx/xxx" ng-model="matric">
+                </label>
+                <label class="item item-input viewopacity">
+                    <span class="input-label">Password</span>
+                    <input type="text" placeholder="" ng-model="password">
+                </label>
+                           
+   
+  
+            <button class="button button-dark button-block" ng-disabled="(!matric || !password)" ng-click="login(matric,password)" >Log in   <i class="icon ion-log-in home"></i></button> 
+        <button class="button  button-assertive button-clear button-block " ng-disabled="(!matric || !password)" ng-click="profile(matric,password)">Your Profile  <i class="ion-ios-person home"></i>
+        </button>
+         </ion-list>
+               <p class=" error">{{erro}}</p>
+           <a ui-sref="signup" class="button button-energized button-outline button-block" style="font-weight:bold">Have You Submitted Your Educational Information?If Not Please Click Here</a>
+    </ion-content>
+    </div>
+</ion-view> 

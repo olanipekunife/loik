@@ -1,0 +1,28 @@
+
+<ion-view view-title="Notifications">
+ <ion-nav-bar class="bar-light">
+  <ion-nav-buttons side="left">
+        <img src="img/logo.png" class="backlogo" />
+      </ion-nav-buttons>
+ <ion-nav-back-button>
+      </ion-nav-back-button>
+       </ion-nav-bar>
+  <ion-content>
+      <div class="card">
+  <div class="item item-divider head">
+    CourseHero
+  </div>
+  <div class="item item-text-wrap">
+   Hello! The audio and the video versions of the pdf's will be available soonest. Please wait for our next update
+  </div>
+</div>
+   <div class="card" ng-repeat="dat in data">
+  <div class="item item-divider head">
+   {{dat.title}}
+  </div>
+  <div class="item item-text-wrap">
+   {{dat.body}}
+  </div>
+</div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,23 @@
+<ion-view view-title="Availiable Courses">
+<ion-nav-bar class="bar-calm">
+<ion-nav-back-button>
+      </ion-nav-back-button>
+      </ion-nav-bar>
+	<div class="bar bar-subheader item-input-inset bar-calm" >
+		<label class="item-input-wrapper" >
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="search" ng-model="search" placholder="search" >
+		</label>
+	</div>
+	<ion-content class="men has-subheader" padding="true">
+	  <div class="list">
+		  <div class="item item-divider divider">
+		    Courses
+		  </div>
+		   <a class="button button-block " ng-click="open(dat)" ng-repeat="dat in data | filter: search" padding="true" >
+		      {{dat.name}}
+		     
+		    </a>
+	  </div>
+	</ion-content>
+</ion-view>

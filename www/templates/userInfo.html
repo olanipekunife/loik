@@ -1,0 +1,57 @@
+
+
+<ion-view view-title="Profile">
+<ion-nav-bar class="bar-calm">
+<ion-nav-back-button>
+      </ion-nav-back-button>
+      </ion-nav-bar>
+	<ion-content class="men" padding="true">
+   <ion-refresher 
+      pulling-text="Pull To Refresh......" 
+      on-refresh="doRefresh()">
+    </ion-refresher>
+	<div class="list">
+
+    <a class="item item-thumbnail-left">
+      <img src="{{auth.profile.picture}}" alt="pic">
+      <h2>{{auth.profile.name}}</h2>
+      <p>{{auth.profile.username}}</p>
+    </a>
+    <p class="error">{{error}}</p>
+<a class="button button-block" >
+         Matric. No. : {{data.matric}}
+         
+        </a>
+        <a class="button button-block" >
+         Level : {{data.level}}
+         <p class="error">{{leve}}</p>
+        </a>
+        <a class="button button-block " >
+     Faculty : {{data.faculty}}
+         
+        </a>
+        <a class="button button-block  ">
+         Department : {{data.department}}
+         
+        </a>
+        <a class="button button-block" >
+          Password : {{data.password}}
+          <p class="error">{{passwor}}</p>
+        </a>
+
+     <a class="button button-block button-balanced"  ng-click="modal.show()">
+       Edit Your Profile  <i class="ion-ios-person "></i>
+         
+        </a>
+</div>
+     <div class="card">
+  <div class="item item-divider head">
+    Note:
+  </div>
+  <div class="item item-text-wrap">
+   Only the department of computer science and information technolgy is suported at the moment.Please wait for the next update.
+  </div>
+ 
+</div>
+	</ion-content>
+</ion-view>

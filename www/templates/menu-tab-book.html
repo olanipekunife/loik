@@ -1,0 +1,23 @@
+
+<ion-view view-title="Pdf">
+  <ion-content class="men padding">
+   <ion-refresher 
+      pulling-text="Pull To Refresh......" 
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <div class="list card" ng-repeat="dat in data">
+
+  <div class="item item-avatar item-text-wrap">
+    <h2 >{{dat.title}}</h2>
+    <p>{{dat.body}}</p>
+    <progress  max="100" value="{{downloadProgress}}" > </progress>
+  </div>
+  <a class="item item-icon-left assertive" ng-click="check()">
+     <i class="icon ion-folder"></i>
+    Open
+  </a>
+  
+</div> 
+<p class="error">{{error}}</p> 
+</ion-content>             
+</ion-view>

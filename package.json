@@ -1,0 +1,34 @@
+{
+  "name": "CourseHero",
+  "version": "1.0.0",
+  "description": "An Android App That Helps Student Get Study Materials In pdf,audio and Video version",
+  "dependencies": {
+    "gulp": "^3.5.6",
+    "gulp-sass": "^2.0.4",
+    "gulp-concat": "^2.2.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-rename": "^1.2.0"
+  },
+  "devDependencies": {
+    "async": "^2.0.1",
+    "bower": "^1.3.3",
+    "cordova-uglify": "^0.2.4",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-useref": "^3.1.0",
+    "gulp-util": "^2.2.14",
+    "jshint": "^2.9.3",
+    "mv": "^2.1.1",
+    "shelljs": "^0.3.0"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-inappbrowser",
+    {
+      "locator": "https://github.com/apache/cordova-plugin-whitelist.git",
+      "id": "cordova-plugin-whitelist"
+    }
+  ],
+  "cordovaPlatforms": [
+    "android"
+  ]
+}

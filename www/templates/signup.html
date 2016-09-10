@@ -1,0 +1,45 @@
+<ion-view view-title="Additional information" >
+ <ion-nav-bar class="bar-stable">
+      </ion-nav-bar>
+    <ion-content padding="true" class="has-header">
+       <a ui-sref="login" class="button button-dark button-outline button-block" style="font-weight:bold"> Provided this information already? Proceed to login</a>
+
+<div class="list">
+     <p class="padding-vertical error">{{matri}} </p>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Matric. No.</span>
+    <input type="text" ng-model="matric" placeholder="Matric. No. e.g sse/xxx/xxx">
+  </label>
+  
+      <label class="item item-input item-select"  style="height: 70px;">
+                    <span class="input-label">Faculty :</span>
+                    <select ng-model="faculty">
+                     <option value="sse" selected>Sse</option>
+                    </select>
+    </label>
+      <label class="item item-input item-select" style="height: 70px;">
+                    <span class="input-label">Department :</span>
+                    <select ng-model="department" >
+                    <option value="cit" selected>Cit</option>
+                    </select>
+    </label>
+    <label class="item item-input item-select" style="height: 70px;">
+                    <span class="input-label">Level :</span>
+                    <select ng-model="level" >
+                    <option value="100" >100 Level</option>
+                    <option value="200">200 Level</option>
+                    <option value="300">300 Level</option>
+                    <option value="400">400 Level</option>
+                    </select>
+    </label>
+  <label class="item item-input item-floating-label">
+     <i class="icon ion-locked placeholder-icon"></i>
+    <span class="input-label">Password</span>
+    <input type="text" ng-model="password" placeholder="password">
+  </label> 
+ <p class="padding-vertical error"> {{passwor}} </p>  
+</div>                 
+            <button class="button button-dark button-block "  ng-disabled="(!matric || !faculty || !department || !level || !password)" ng-click="signup(matric,faculty,department,level,password)">Sign up</button>
+              <p class="padding error">  {{erro}} </p>
+    </ion-content>
+</ion-view>

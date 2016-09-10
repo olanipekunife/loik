@@ -1,0 +1,43 @@
+<ion-view view-title="Courses">
+	<div class="bar bar-subheader item-input-inset bar-dark" >
+		<label class="item-input-wrapper" >
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="search" ng-model="search" placholder="search" >
+		</label>
+	</div>
+	<ion-content class="men has-subheader" padding="true">
+	 <ion-refresher 
+      pulling-text="Pull To Refresh......" 
+      on-refresh="doRefresh()">
+    </ion-refresher>
+	  <div class="list">
+
+		  <div class="item item-divider divider">
+		    {{l}} Level
+		  </div>
+<ion-item class=" viewopacity" ng-repeat="book in books | filter: search">
+		   <a  class="button button-full icon-right ion-chevron-right item-text-wrap"  ui-sref="menu.tab.book({level:book.level,department:book.department,id:book.id,title:book.title})">
+		      {{book.title }}
+		     
+		    </a>
+		</ion-item>
+		     <p class=" error">{{error}} </p>
+		    <div class="item item-divider divider" style="color:  #11c1f3" >
+      	    Other Levels
+		    </div>
+		    <ion-item class=" viewopacity" ng-repeat="carry in carrys | filter: search">
+		   <a  class="button button-full  icon-right ion-chevron-right item-text-wrap "  ui-sref="menu.tab.book({level:carry.level,department:carry.department,id:carry.id,title:carry.title})">
+		      {{carry.title}}  
+		    
+		    </a>
+		</ion-item>
+		    <p class="error">{{erro}}</p>
+	  </div>
+	  <ion-infinite-scroll
+	ng-if="!nodata"
+	distance="5%"
+  on-infinite="loadMore()">
+</ion-infinite-scroll>
+	</ion-content>
+</ion-view>
+	

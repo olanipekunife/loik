@@ -1,0 +1,62 @@
+<ion-view  view-title="Home">
+ <ion-nav-bar class="bar-dark" >
+  <ion-nav-buttons side="left">
+        <img src="img/logo.png" class="backlogo" />
+      </ion-nav-buttons>
+ <ion-nav-back-button></ion-nav-back-button> 
+      </ion-nav-bar>
+      <div class="black">
+    <ion-content padding-horizontal="true" class="splash " >
+<div class="bottom">
+  <div class="row viewopacity">  
+     <div class="col col-33" ui-sref="authlogin" ng-if="!isAuthenticated">
+      <div  style="height: 5px;"></div>
+      <i class="icon ion-log-in home"></i>
+      <div  style="height: 5px;"></div>
+        Login/Signup
+    </div>
+     <div class="col col-33 " ng-click="logout()" ng-if="isAuthenticated" >
+      <div  style="height: 5px;"></div>
+      <i class="icon ion-log-out home"></i>
+      <div  style="height: 5px;"></div>
+        Logout
+    </div>
+    <div class="col" ui-sref="login">
+      <div  style="height: 5px;"></div>
+      <i class="icon ion-ios-copy home"></i>
+      <div  style="height: 5px;"></div>
+        Your Books
+    </div>
+    <div class="col col-33" ui-sref="availableCourse">
+    	<div  style="height: 5px;"></div>
+    	<i class="icon ion-ios-copy-outline home"></i>
+      <div  style="height: 5px;"></div>
+       Available Courses
+    </div>
+  </div>
+    <div class="row viewopacity">
+       <div class="col col-33" ui-sref="notification">
+      <div  style="height: 5px;"></div>
+      <i class="icon  ion-android-notifications-none home"></i>
+      <div  style="height: 5px;"></div>
+       Notifications
+    </div>
+    <div class="col col-33" ng-click="browse()">
+      <div  style="height: 5px;"></div>
+      <i class="icon ion-iphone home"></i>
+      <div  style="height: 5px;"></div>
+       Contact Us
+    </div>
+      <div class="col col-33" ui-sref="about">
+      <div  style="height: 5px;"></div>
+      <i class="icon ion-ios-person-outline home"></i>
+      <div  style="height: 5px;"></div>
+       About
+    </div>
+  </div>
+</div>
+
+
+    </ion-content>
+    </div>
+</ion-view>

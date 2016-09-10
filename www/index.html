@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <!-- build:css dist_css/styles.css -->
+    <link href="css/ionic.app.min.css" rel="stylesheet">
+     <!-- endbuild -->
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+       <script src="lib/ionic/js/angular/angular-route.min.js"></script>
+       <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+    <!-- build:js dist_js/templates.js -->
+      <script src="dist/dist_js/app/templates.js"></script>
+      <!-- endbuild -->
+       <!-- build:js dist_js/app.js -->
+  <script src="dist/dist_js/app/app.js"></script>
+    <script src="dist/dist_js/app/controllers.js"></script>
+    <script src="dist/dist_js/app/services.js"></script>
+      <!-- endbuild -->
+ <script src="lib/auth0-lock/build/auth0-lock.min.js"></script>
+ <script src="lib/auth0-angular/build/auth0-angular.min.js"></script>
+ <script src="lib/a0-angular-storage/dist/angular-storage.min.js"></script>
+ <script src="lib/angular-jwt/dist/angular-jwt.min.js"></script>
+  </head>
+  <body ng-app="starter" ng-strict-di>
+    <ion-nav-view  animation="slide-left-right" ></ion-nav-view>
+  </body>
+</html>
